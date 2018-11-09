@@ -11,7 +11,9 @@ function send() {
 
   xhr.onreadystatechange = function() { // Call a function when the state changes.
       if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-          console.log(JSON.parse(this.response));
+        var data = JSON.parse(this.response);
+        openModal(data.score, data.percentage);  
+        console.log(JSON.parse(this.response));
       }
   }
   xhr.send(JSON.stringify(data));
@@ -31,3 +33,49 @@ function collectData() {
     "totalWorkingYears":$("#working-years-input").val()
   }
 }
+function openModal(score, percentage) {
+
+  var myModal = document.getElementById("myModal");
+ myModal.style.display = "block";
+ myModal.classList.remove("fade");
+ myModal.classList.add("modal-open");
+ var fa = document.getElementById("aiLevel");
+ fa.classList = "far fa-3x";
+   fa.classList.add(getSatisfactionClass(score));
+   var progress = document.getElementById("aiProgress");
+   progress.style.width = Math.floor(percentage) + '%';
+   progress.ariaValuenow = Math.floor(percentage);
+   progress.innerText = Math.floor(percentage) + '%';
+
+}
+
+function closeModal() {
+
+   var myModal = document.getElementById("myModal");
+  myModal.style.display = "none";
+  myModal.classList.add("fade");
+  myModal.classList.remove("modal-open");
+       
+ }
+
+ function getSatisfactionClass(level) {
+   var className = "";
+   switch(level) {
+       case 1:
+           className = "fa-frown";
+           break;
+       case 4:
+           className = "fa-laugh";
+           break;
+
+       case 2:
+           className = "fa-meh";
+           break;
+       case 3:
+           className = "fa-grin";
+           break;
+   }
+   return className;
+ }
+
+
