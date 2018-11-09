@@ -75,7 +75,6 @@ X = sf[['Age', 'Education', 'JobLevel', 'NumCompaniesWorked', 'TrainingTimesLast
 Y = sf['Attrition']
 
 ################# Training Classifier ################
-from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
 import time
