@@ -171,7 +171,7 @@ class Attrition(Resource):
         print(result)
 
         responseBody = {
-            "percentage": percentage,
+            "percentage": "{:05.2f}".format(percentage),
             "score" : response
         }
 

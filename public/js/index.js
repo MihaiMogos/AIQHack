@@ -1,7 +1,8 @@
 function send() {
   var data = collectData();
-  $.post("127.0.0.1:5000/attrition");
-  
+
+  console.log(data);
+
   var xhr = new XMLHttpRequest();
   xhr.open("POST", 'http://127.0.0.1:5000/attrition', true);
 
@@ -10,10 +11,10 @@ function send() {
 
   xhr.onreadystatechange = function() { // Call a function when the state changes.
       if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-          // Request finished. Do processing here.
+          console.log(JSON.parse(this.response));
       }
   }
-  xhr.send(data);
+  xhr.send(JSON.stringify(data));
 }
 
 function collectData() {
