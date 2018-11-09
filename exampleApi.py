@@ -99,8 +99,10 @@ print("Number of mislabeled points out of a total {} points : {}, performance {:
 ################# API ################
 from flask import Flask
 from flask_restful import Api, Resource, reqparse
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 api = Api(app)
 
 class Attrition(Resource):

@@ -8,17 +8,19 @@ html
     // Latest compiled and minified JavaScript
     script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
-
+    script(src='js/index.js')
 
   body
     .container
       .row
         .col-md-6.col-md-offset-3
+          br
+          br
           nav.navbar.navbar-default
             .container-fluid
               .navbar-header
                 a.navbar-brand(href='#')
-                  img(alt='Brand', src='...')
+                  //img(alt='Brand', src='...')
           br
           br        
           form
@@ -28,21 +30,21 @@ html
                   label(for='education-input') Education
                   select#education-input.form-control
                     option(value='', selected='', disabled='', hidden='') Choose education
-                    option Politehnica
-                    option Universitate
-                    option Cibernetica
-                    option Other technical
-                    option Other
+                    option(value='1') Politehnica
+                    option(value='2') Universitate
+                    option(value='3') Cibernetica
+                    option(value='4') Other technical
+                    option(value='5') Other
               .col-md-6    
                 .form-group
                   label(for='job-level-input') Job Level
                   select#job-level-input.form-control
                     option(value='', selected='', disabled='', hidden='') Choose job level
-                    option Novice
-                    option Advance Beginner
-                    option Competent
-                    option Proficient
-                    option Expert
+                    option(value='1') Novice
+                    option(value='2') Advance Beginner
+                    option(value='3') Competent
+                    option(value='4') Proficient
+                    option(value='5') Expert
             .row
               .col-md-6
                 .form-group
@@ -78,4 +80,7 @@ html
               .col-md-6    
                 .form-group
                   label(for='working-years-input') Total working years
-                  input#working-years-input.form-control(type='number')      
+                  input#working-years-input.form-control(type='number')     
+            .row
+              .col-md-2.col-md-offset-5
+                button.btn.btn-primary(type='button', onclick="send()") Submit
