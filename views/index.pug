@@ -95,8 +95,8 @@ html
                 // Modal content
                 .modal-content
                   .modal-header
-                    button.close(type='button', onclick='closeModal()') ×
-                    h4.modal-title BRObotu Survey Result
+                    button.close(type='button', data-dismiss='modal', aria-label='Close') ×
+                    h4.modal-title Brobot Survey Result
                   .modal-body
                     p
                       | Hapiness Level: 
@@ -109,4 +109,4 @@ html
                       i.far.fa-2x.fa-meh
                       i.far.fa-2x.fa-grin
                       i.far.fa-2x.fa-laugh
-                    button.btn.btn-default(type='button', onclick='closeModal()') Close
+                    button.btn.btn-default(type='button', data-dismiss='modal', aria-label='Close') Close
