@@ -1,5 +1,6 @@
 # AIQHack
 
+Backend
 
 http://localhost:5000/attrition
 
@@ -15,3 +16,10 @@ http://localhost:5000/attrition
     "monthlyIncome":"3",
     "totalWorkingYears":"24"
 }
+
+FrontEnd
+
+npm install
+npm start
+
+http://localhost:3000/
