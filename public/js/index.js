@@ -17,6 +17,7 @@ function send() {
         fa.classList = "far fa-3x";
         fa.classList.add(getSatisfactionClass(data.score));
         var progress = document.getElementById("aiProgress");
+        progress.classList.add(getSatisfactionColor(data.score));
         progress.style.width = Math.floor(data.percentage) + '%';
         progress.ariaValuenow = Math.floor(data.percentage);
         progress.innerText = Math.floor(data.percentage) + '%';
@@ -40,6 +41,26 @@ function collectData() {
     "monthlyIncome":$("#salary-input").val(),
     "totalWorkingYears":$("#working-years-input").val()
   }
+}
+
+function getSatisfactionColor(level) {
+  var className = "";
+  switch(level) {
+      case 1:
+          className = "emo-frown"
+          break;
+      case 4:
+          className = "emo-laugh";
+          break;
+
+      case 2:
+          className = "emo-meh";
+          break;
+      case 3:
+          className = "emo-grin";
+          break;
+  }
+  return className;
 }
 
  function getSatisfactionClass(level) {
