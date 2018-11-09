@@ -168,7 +168,12 @@ class Attrition(Resource):
         print("-----------------------RESULT-------------------------")
         print(result)
 
-        return response, 200 
+        responseBody = {
+            "percentage": percentage,
+            "score" : response
+        }
+
+        return responseBody, 200 
 
 api.add_resource(Attrition, "/attrition")
 
