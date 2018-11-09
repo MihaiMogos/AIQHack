@@ -4,6 +4,8 @@
 
 __pip3 install -r requirements__
 
+__python3 exampleApi.py__
+
 http://localhost:5000/attrition
 
 {
