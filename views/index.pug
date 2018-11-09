@@ -11,42 +11,71 @@ html
 
 
   body
-    h1= message
     .container
-      nav.navbar.navbar-default
-        .container-fluid
-          .navbar-header
-            a.navbar-brand(href='#')
-              img(alt='Brand', src='...')
-
-      form
-        .form-group
-          label(for='education-input') Education
-          select#education-input.form-control
-            option(value='', selected='', disabled='', hidden='') Choose education
-            option Politehnica
-            option Universitate
-            option Cibernetica
-            option Other technical
-            option Other
-        .form-group
-          label(for='job-level-input') Job Level
-          select#job-level-input.form-control
-            option(value='', selected='', disabled='', hidden='') Choose job level
-            option Novice
-            option Advance Beginner
-            option Competent
-            option Proficient
-            option Expert
-        .form-group
-          label(for='age-input') Age
-          input#age-input.form-control(type='number')
-        .form-group
-          label(for='companies-worked-input') Number of companies worked
-          input#companies-worked-input.form-control(type='number')
-        .form-group
-          label(for='trainings-last-year-input') Trainings last year
-          input#trainings-last-year-input.form-control(type='number')
-        .form-group
-          label(for='years-last-company-input') Years at the last company
-          input#years-last-company-input.form-control(type='number')   
+      .row
+        .col-md-6.col-md-offset-3
+          nav.navbar.navbar-default
+            .container-fluid
+              .navbar-header
+                a.navbar-brand(href='#')
+                  img(alt='Brand', src='...')
+          br
+          br        
+          form
+            .row
+              .col-md-6
+                .form-group
+                  label(for='education-input') Education
+                  select#education-input.form-control
+                    option(value='', selected='', disabled='', hidden='') Choose education
+                    option Politehnica
+                    option Universitate
+                    option Cibernetica
+                    option Other technical
+                    option Other
+              .col-md-6    
+                .form-group
+                  label(for='job-level-input') Job Level
+                  select#job-level-input.form-control
+                    option(value='', selected='', disabled='', hidden='') Choose job level
+                    option Novice
+                    option Advance Beginner
+                    option Competent
+                    option Proficient
+                    option Expert
+            .row
+              .col-md-6
+                .form-group
+                  label(for='age-input') Age
+                  input#age-input.form-control(type='number')
+              .col-md-6
+                .form-group
+                  label(for='companies-worked-input') Number of companies worked
+                  input#companies-worked-input.form-control(type='number')
+            .row
+              .col-md-6
+                .form-group
+                  label(for='trainings-last-year-input') Trainings last year
+                  input#trainings-last-year-input.form-control(type='number')
+              .col-md-6        
+                .form-group
+                  label(for='years-company-input') Years at company
+                  input#years-company-input.form-control(type='number')
+            .row          
+              .col-md-6        
+                .form-group
+                  label(for='years-since-last-promotion-input') Years since last promotion
+                  input#years-since-last-promotion-input.form-control(type='number')
+              .col-md-6
+                .form-group
+                  label(for='distance-from-home-input') Distance from home
+                  input#distance-from-home-input.form-control(type='number')
+            .row
+              .col-md-6      
+                .form-group
+                  label(for='salary-input') Salary
+                  input#salary-input.form-control(type='number')
+              .col-md-6    
+                .form-group
+                  label(for='working-years-input') Total working years
+                  input#working-years-input.form-control(type='number')      
