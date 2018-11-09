@@ -1,5 +1,10 @@
 # AIQHack
 
+## Backend
+
+__pip3 install -r requirements__
+
+__python3 exampleApi.py__
 
 http://localhost:5000/attrition
 
@@ -15,3 +20,11 @@ http://localhost:5000/attrition
     "monthlyIncome":"3",
     "totalWorkingYears":"24"
 }
+
+## FrontEnd
+
+__npm install__
+
+__npm start__
+
+http://localhost:3000/
