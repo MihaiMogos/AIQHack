@@ -77,6 +77,7 @@ Y = sf['Attrition']
 ################# Training Classifier ################
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
+from sklearn.ensemble import GradientBoostingClassifier
 import time
 
 
@@ -84,7 +85,8 @@ X_train, X_test = train_test_split(sf, test_size=0.5, random_state=int(time.time
 used_features = ['Age', 'Education', 'JobLevel', 'NumCompaniesWorked', 'TrainingTimesLastYear',
        'YearsAtCompany', 'YearsSinceLastPromotion', 'DistanceFromHome', 'MonthlyIncome', 'TotalWorkingYears']
 
-gnb = GaussianNB()
+# gnb = GaussianNB()
+gnb = GradientBoostingClassifier()
 
 gnb.fit(X_train[used_features].values, X_train['Attrition'])
 
