@@ -1,6 +1,8 @@
 # AIQHack
 
-Backend
+## Backend
+
+__pip3 install -r requirements__
 
 http://localhost:5000/attrition
 
@@ -17,9 +19,9 @@ http://localhost:5000/attrition
     "totalWorkingYears":"24"
 }
 
-FrontEnd
+## FrontEnd
 
-npm install
-npm start
+__npm install
+npm start__
 
 http://localhost:3000/
