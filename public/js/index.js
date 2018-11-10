@@ -17,6 +17,7 @@ function send() {
         fa.classList = "far fa-3x";
         fa.classList.add(getSatisfactionClass(data.score));
         var progress = document.getElementById("aiProgress");
+        progress.classList = "";
         progress.classList.add(getSatisfactionColor(data.score));
         progress.style.width = Math.floor(data.percentage) + '%';
         progress.ariaValuenow = Math.floor(data.percentage);
